@@ -25,3 +25,33 @@ changelog:
     exclude:
       - '^docs:'
       - '^test:'
+
+brews:
+  - name: git-branchcut
+    tap:
+      owner: dlsrb6342
+      name: git-branchcut
+
+    commit_author:
+      name: dlsrb6342
+      email: dlsrb6342@gmail.com
+
+    folder: Formula
+
+    caveats: "git-branchcut --help"
+    homepage: "https://github.com/dlsrb6342/branchcut"
+    description: "A Git branch cleanup addon, branchcut."
+
+    license: "MIT"
+
+    custom_block: |
+      head "https://github.com/dlsrb6342/branchcut"
+
+    # Packages your package depends on.
+    dependencies:
+      - name: git
+
+    # Custom install script for brew.
+    # Default is 'bin.install "program"'.
+    install: |
+      bin.install "git-branchcut"
