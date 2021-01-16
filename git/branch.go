@@ -45,7 +45,7 @@ func DeleteBranches(branches []interface{}, force bool, dryRun bool) {
 		args = append(args, "--force")
 	}
 
-	var branchNames []string
+	var branchNames []interface{}
 	for i := 0; i < len(branches); i++ {
 		branch := strings.TrimSpace(fmt.Sprintf("%v", branches[i]))
 		if len(branch) > 0 {
@@ -53,11 +53,11 @@ func DeleteBranches(branches []interface{}, force bool, dryRun bool) {
 		}
 	}
 
-	args = append(args, strings.Join(branchNames[:], " "))
+	args = append(args, branchNames...)
 	if dryRun {
 		fmt.Println(gitExecutable, joinInterfaceArray(args, " "))
 	} else {
-		sh.Command(gitExecutable, args).Run()
+		sh.Command(gitExecutable, args...).Run()
 	}
 
 }
