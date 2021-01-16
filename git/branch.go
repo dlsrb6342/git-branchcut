@@ -53,6 +53,11 @@ func DeleteBranches(branches []interface{}, force bool, dryRun bool) {
 		}
 	}
 
+	if len(branchNames) <= 0 {
+		fmt.Println("There is no branch to delete.")
+		return
+	}
+
 	args = append(args, branchNames...)
 	if dryRun {
 		fmt.Println(gitExecutable, joinInterfaceArray(args, " "))
