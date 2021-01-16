@@ -5,21 +5,21 @@
 class GitBranchcut < Formula
   desc "A Git branch cleanup addon, branchcut."
   homepage "https://github.com/dlsrb6342/branchcut"
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/dlsrb6342/git-branchcut/releases/download/v0.0.1/git-branchcut_0.0.1_Darwin_x86_64.tar.gz"
-    sha256 "83eea825203318c3b318ede153d661677e355aa5177d6d65c9a3e2f0d04235e6"
+    url "https://github.com/dlsrb6342/git-branchcut/releases/download/v0.0.2/git-branchcut_0.0.2_Darwin_x86_64.tar.gz"
+    sha256 "6553e6078a15df5076eb84cd9834b5cae227e4b1a4245fcf4a10ef998e6df24d"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/dlsrb6342/git-branchcut/releases/download/v0.0.1/git-branchcut_0.0.1_Linux_x86_64.tar.gz"
-    sha256 "a55aa862c5ac64ff7d14652ee9b201743eb3936c73551c31575161e41fd2e695"
+    url "https://github.com/dlsrb6342/git-branchcut/releases/download/v0.0.2/git-branchcut_0.0.2_Linux_x86_64.tar.gz"
+    sha256 "5de3d91a73de9286c2ed512712959b47c319b13c3003a7408686bf955b60e14c"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/dlsrb6342/git-branchcut/releases/download/v0.0.1/git-branchcut_0.0.1_Linux_arm64.tar.gz"
-    sha256 "f4aa7e5024dca58409a6c6f563ba08ec985af604d0d8cc430602a63e4e469f2f"
+    url "https://github.com/dlsrb6342/git-branchcut/releases/download/v0.0.2/git-branchcut_0.0.2_Linux_arm64.tar.gz"
+    sha256 "59cf77fbaa2e19a50be7cc0fbb9a0d2011df7d4d41ed95560b308c992b310ae6"
   end
 
   head "https://github.com/dlsrb6342/branchcut"
