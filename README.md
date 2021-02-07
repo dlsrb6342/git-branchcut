@@ -4,7 +4,7 @@
 [![version](https://img.shields.io/github/v/release/dlsrb6342/git-branchcut)](https://github.com/dlsrb6342/git-branchcut/releases/latest)
 
 
-git-branchcut is a git add-on for deleting git branches with various options.
+git-branchcut is a git add-on for cleaning up git outdated branches with various options.
 
 ### Why? 
 I created this because there are too many branches stacked in my macbook. But there is no easy way to cleanup many outdated branches at once. Instead of deleting branches manually, this can be a solution.
